@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buon compleanno Pupino mio!</title>
   <link rel="icon" href="ghibli.jpeg" type="image/jpeg">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
     body {
       background-color: #001f3f;
       color: white;
@@ -75,6 +75,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
+      margin-top: 30px;
       object-fit: cover;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       animation: rotateIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite;
@@ -117,6 +118,7 @@
 
     footer p {
       margin: 0;
+       margin-bottom: 60px;
     }
     @media (max-width: 768px) {
       h1 { font-size: 1.5rem; }
@@ -153,6 +155,22 @@
     window.addEventListener('load', () => {
       document.getElementById('preloader').style.display = 'none';
       document.querySelector('main').style.display = 'block';
+
+      const sections = document.querySelectorAll('.section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
     });
   </script>
 </body>
