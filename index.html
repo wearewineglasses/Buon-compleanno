@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buon compleanno Pupino mio!</title>
+  <link rel="icon" href="ghibli.jpeg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background-color: linear-gradient(90deg, #020246 10%, #3c95fc 50%);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #001f3f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #preloader img {
+      width: 200px;
+      animation: speed 2s linear infinite;
+    }
+    @keyframes speed {
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(300px); opacity: 0; }
+    }
+    main {
+      display: none;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: rotateIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite;
+    }
+    @keyframes rotateIn {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); }
+      50% { transform: translateY(-10px); filter: drop-shadow(0 15px 5px rgba(0,0,0,0.3)); }
+    }
+    iframe {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+    }
+    p {
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: left;
+      color: white;
+      font-size: 0.9rem;
+    }
+    footer img {
+      width: 60px;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      .profile-img { width: 150px; height: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <img src="moto.webp" alt="Moto animata">
+  </div>
+
+  <main>
+    <h1>Buon compleanno Pupino mio!</h1>
+    <img src="pupini.jpeg" alt="Pupino" class="profile-img">
+    <iframe src="https://www.youtube.com/embed/YetFuBTYrdM?si=D6pNnRNjj4VAJz1C" allowfullscreen></iframe>
+    <p>
+      Caro dolce e perfetto pupino mio,<br><br>
+      volevo regalarti degli interfoni, non sapevo quali scegliere, dunque mi sono affidata a colui del quale ti fidi e che ha l'onore di tenerti compagnia mentre fai la pupù.<br><br>
+      Questo dono è in vista dei nostri programmi estivi, di Curigghjn, e in quanto sarebbe bellissimo poterci parlare mentre visitiamo posti bellissimi, per assicurarci che entrambi stiamo bene, per dirci quanto ci amiamo e siamo felici di stare assieme, e perché finalmente potrà nuovamente rallegrare i nostri viaggi Jamiroquai.<br><br>
+      Nell'attesa di viverci per un intero mese, vorrei dirti che sono felicissima di essere qui con te oggi e volevo augurarti un buon (quasi) compleanno!<br><br>
+      Ti amiamo infinitamente tanto.<br>
+      Dalle tue principesse: Pupina e Pimpim
+    </p>
+    <footer>
+      <img src="ghibli.jpeg" alt="Ghibli" />
+      <div>
+        Compleanno del futuro Tenente Fulgente Lelellente<br>
+        Bergamo, 07/07/2025
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
