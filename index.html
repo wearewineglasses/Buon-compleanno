@@ -13,117 +13,111 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
-    body {
-      background-color: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #001f3f;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    #preloader img {
-      width: 200px;
-      animation: speed 2s linear infinite;
-    }
-    @keyframes speed {
-      0% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(300px); opacity: 0; }
-    }
-    main {
-      display: none;
-      animation: fadeIn 2s forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    h1 {
-      font-size: 3em;
-      text-align: center;
-      margin-top: 40px;
-      text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;
-      animation: glow 2s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff; }
-      to { text-shadow: 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff; }
-    }
-
-    .section {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-out;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .profile-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin-top: 30px;
-      object-fit: cover;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      animation: rotateIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite;
-    }
-    @keyframes rotateIn {
-      0% { transform: rotate(0); }
-      100% { transform: rotate(360deg); }
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); }
-      50% { transform: translateY(-10px); filter: drop-shadow(0 15px 5px rgba(0,0,0,0.3)); }
-    }
-    iframe {
-      margin: 20px auto;
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border: none;
-    }
-    p {
-      margin-top: 20px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-    }
- footer {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background-color: #000814;
-      margin-top: 20px;
-    }
-
-    footer img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
-    footer p {
-      margin-right: 20px;
-    }
-    @media (max-width: 768px) {
-      h1 { font-size: 1.5rem; }
-      .profile-img { width: 150px; height: 150px; }
-    }
+body {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #001f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#preloader img {
+  width: 200px;
+  animation: speed 2s linear infinite;
+}
+@keyframes speed {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(300px); opacity: 0; }
+}
+main {
+  display: none;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff; }
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff; }
+}
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 30px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: rotateIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite;
+}
+@keyframes rotateIn {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); }
+  50% { transform: translateY(-10px); filter: drop-shadow(0 15px 5px rgba(0,0,0,0.3)); }
+}
+iframe {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+}
+p {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #000814;
+  margin-top: 20px;
+}
+footer img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+footer p {
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  .profile-img { width: 150px; height: 150px; }
+}
   </style>
 </head>
 <body>
@@ -132,23 +126,36 @@
   </div>
 
   <main>
-    <h1>Buon compleanno Pupino mio!</h1>
-    <img src="pupini.jpeg" alt="Pupino" class="profile-img">
-    <iframe src="https://www.youtube.com/embed/YetFuBTYrdM?si=D6pNnRNjj4VAJz1C" allowfullscreen></iframe>
-    <p>
-      Caro dolce e perfetto pupino mio,<br><br>
-      volevo regalarti degli interfoni, non sapevo quali scegliere, dunque mi sono affidata a colui del quale ti fidi e che ha l'onore di tenerti compagnia mentre fai la pupù.<br><br>
-      Questo dono è in vista dei nostri programmi estivi, di Curigghjn, e in quanto sarebbe bellissimo poterci parlare mentre visitiamo posti bellissimi, per assicurarci che entrambi stiamo bene, per dirci quanto ci amiamo e siamo felici di stare assieme, e perché finalmente potrà nuovamente rallegrare i nostri viaggi Jamiroquai.<br><br>
-      Nell'attesa di viverci per un intero mese, vorrei dirti che sono felicissima di essere qui con te oggi e volevo augurarti un buon (quasi) compleanno!<br><br>
-      Ti amiamo infinitamente tanto.<br>
-      Dalle tue principesse: Pupina e Pimpim
-    </p>
-      <footer>
-    <img src="ghibli.jpeg" alt="Logo Ghibli">
-    <p> Compleanno del futuro Tenente Fulgente Lelellente<br>
-        Bergamo, 07/07/2025</p>
-  </footer>
+    <div class="section">
+      <h1>Buon compleanno Pupino mio!</h1>
+    </div>
 
+    <div class="section">
+      <img src="pupini.jpeg" alt="Pupino" class="profile-img">
+    </div>
+
+    <div class="section">
+      <iframe src="https://www.youtube.com/embed/YetFuBTYrdM?si=D6pNnRNjj4VAJz1C" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+      <p>
+        Caro dolce e perfetto pupino mio,<br><br>
+        volevo regalarti degli interfoni, non sapevo quali scegliere, dunque mi sono affidata a colui del quale ti fidi e che ha l'onore di tenerti compagnia mentre fai la pupù.<br><br>
+        Questo dono è in vista dei nostri programmi estivi, di Curigghjn, e in quanto sarebbe bellissimo poterci parlare mentre visitiamo posti bellissimi, per assicurarci che entrambi stiamo bene, per dirci quanto ci amiamo e siamo felici di stare assieme, e perché finalmente potrà nuovamente rallegrare i nostri viaggi Jamiroquai.<br><br>
+        Nell'attesa di viverci per un intero mese, vorrei dirti che sono felicissima di essere qui con te oggi e volevo augurarti un buon (quasi) compleanno!<br><br>
+        Ti amiamo infinitamente tanto.<br>
+        Dalle tue principesse: Pupina e Pimpim
+      </p>
+    </div>
+
+    <div class="section">
+      <footer>
+        <img src="ghibli.jpeg" alt="Logo Ghibli">
+        <p> Compleanno del futuro Tenente Fulgente Lelellente<br>
+            Bergamo, 07/07/2025</p>
+      </footer>
+    </div>
   </main>
 
   <script>
@@ -158,19 +165,19 @@
 
       const sections = document.querySelectorAll('.section');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+      sections.forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </body>
